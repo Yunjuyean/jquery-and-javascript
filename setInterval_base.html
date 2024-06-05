@@ -7,13 +7,15 @@
 </head>
 <body>
     <div class="count">
-        여기 숫자노출되게 한다.
+        0
     </div>
     <script>
         let count =0;
         setInterval(function(){
-           $(".count").html(count);
-        }, 1000);
+            count++;
+            count %= 11;
+            document.querySelector(".count").innerHTML = count;
+        },1000);
     </script>
 </body>
 </html>
