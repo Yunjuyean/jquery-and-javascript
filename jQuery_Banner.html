@@ -11,7 +11,10 @@
                 $(".banner-slide").width(aniWidth);
              
                 setInterval(function(){
-                    $(".banner-wrapper").animate({"marginLeft" : "-="+aniWidth }, 400)
+                    $(".banner-wrapper").animate({"marginLeft" : "-="+aniWidth }, 400, function(){
+                        $(".banner-slide").eq(0).appendTo($(".banner-wrapper"));
+                        $(".banner-wrapper").css({"marginLeft" : 0 })
+                    })
                 }, 3000)
                 
 
